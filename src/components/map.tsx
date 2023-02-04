@@ -1,5 +1,5 @@
 import { GoogleMap, MarkerF } from "@react-google-maps/api";
-import { Divider, Typography, Button } from "antd";
+import { Typography, Button } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -75,13 +75,11 @@ const MapComponent: React.FC = () => {
                     <Button
                       type="primary"
                       shape="circle"
+                      className="delete-btn"
                       icon={<DeleteOutlined />}
                       onClick={() => deleteSearch(x.address)}
                     />
                   </div>
-                  {index !== searchList.length - 1 && (
-                    <Divider className="bottom-divider" />
-                  )}
                 </div>
               ))}
             {!searchHistoryExist && (

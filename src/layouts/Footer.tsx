@@ -29,7 +29,7 @@ const Footer = () => {
               `https://github.com/gearyaudie/google-places-autocomplete`
             )
           }
-          className="mr-sm"
+          className="link-btn mr-sm"
         />
         <Button
           shape="circle"
@@ -37,12 +37,13 @@ const Footer = () => {
           onClick={() =>
             openWindow(`https://www.linkedin.com/in/geary-audie-308734142/`)
           }
-          className="mr-sm"
+          className="link-btn mr-sm"
         />
         <Button
           shape="circle"
           icon={<GlobalOutlined />}
           onClick={() => openWindow(`https://gearyaudie.com`)}
+          className="link-btn"
         />
       </div>
     </div>

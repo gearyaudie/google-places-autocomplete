@@ -11,7 +11,6 @@ const initialState: ISearchRedux = {
   loading: false,
   search: [],
   currentLocation: { lat: 3.1569, lng: 101.7123 },
-  icon: "",
   error: "",
 };
 

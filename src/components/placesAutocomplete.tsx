@@ -1,9 +1,10 @@
 import React from "react";
 import usePlacesAutocomplete from "use-places-autocomplete";
 import { AutoComplete } from "antd";
-import { useDispatch } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 import { fetchLocation } from "../redux/actions/search";
+import { RootState } from "../redux/reducers";
 
 const PlacesAutocomplete: React.FC<any> = () => {
   const {
@@ -15,12 +16,22 @@ const PlacesAutocomplete: React.FC<any> = () => {
 
   const dispatch = useDispatch();
   const { Option }: any = AutoComplete;
+  const searchList = useSelector((state: RootState) => state.search.search);
 
   // Move the map and save data when a place is selected
-  const handleSelect = async (address: any) => {
-    setValue(address, false);
+  const handleSelect = async (address: string) => {
+    let existInSearchHistory = searchList.some(
+      (x: any) => x.address === address
+    );
+
+    // Show info notification when search history already exist
+    if (existInSearchHistory) {
+      toast.info("This location already exist in your search history 😉");
+    } else {
+      setValue(address, false);
+      dispatch(fetchLocation(address));
+    }
     clearSuggestions();
-    dispatch(fetchLocation(address));
     setValue("");
   };
 

@@ -13,6 +13,14 @@
   max-width: 300px;
 }
 
+.link-btn {
+  transition: transform ease 300ms;
+
+  &:hover {
+    transform: translate(0, -10px);
+  }
+}
+
 .btn-container {
   margin-top: 35px;
 }

@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
           className="navbar-logo"
         />
       </div>
-      <Title level={4} className="navbar-title">
+      <Title level={3} className="navbar-title">
         Lookitup
       </Title>
     </div>

@@ -2,7 +2,6 @@ export interface ISearchRedux {
   loading?: boolean;
   search?: any;
   currentLocation?: { lat: number; lng: number };
-  icon?: any;
   error?: "";
 }
 
