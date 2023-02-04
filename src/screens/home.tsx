@@ -1,8 +1,9 @@
 import { useLoadScript } from "@react-google-maps/api";
 import { Spin } from "antd";
 
-import MapComponent from "../components/map";
-import NavbarComponent from "../components/navbar";
+import MapComponent from "../components/Map";
+import NavbarComponent from "../layouts/Navbar";
+import Layout from "../layouts/Layout";
 
 export default function HomeScreen() {
   const apiKey: string = process.env.REACT_APP_GOOGLE_MAPS_API_KEY || "";
@@ -21,9 +22,9 @@ export default function HomeScreen() {
     );
 
   return (
-    <>
+    <Layout>
       <NavbarComponent />
       <MapComponent />
-    </>
+    </Layout>
   );
 }

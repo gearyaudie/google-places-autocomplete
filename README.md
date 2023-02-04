@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Google places autocomplete - assignment task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Made with React JS, Redux, Redux Thunk, Google maps API.
 
 ## Available Scripts
 

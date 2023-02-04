@@ -1,3 +1,4 @@
+import { ISearchRedux } from "../../interface/search";
 import {
   DELETE_ALL,
   DELETE_SEARCH_LIST,
@@ -6,15 +7,7 @@ import {
   FETCH_LOCATION_SUCCESS,
 } from "../types/search";
 
-interface State {
-  loading?: boolean;
-  search?: any;
-  currentLocation?: { lat: number; lng: number };
-  icon?: any;
-  error?: "";
-}
-
-const initialState: State = {
+const initialState: ISearchRedux = {
   loading: false,
   search: [],
   currentLocation: { lat: 3.1569, lng: 101.7123 },

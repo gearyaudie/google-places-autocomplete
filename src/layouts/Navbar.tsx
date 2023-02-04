@@ -1,6 +1,7 @@
 import { Typography } from "antd";
+import "../assets/css/Navbar.css";
 
-const NavbarComponent = () => {
+const NavbarComponent: React.FC = () => {
   const { Title } = Typography;
 
   return (
@@ -8,7 +9,7 @@ const NavbarComponent = () => {
       <div>
         <img
           src="https://i.ibb.co/9WZKQBD/pngwing-com-2.png"
-          alt=""
+          alt="app-logo"
           className="navbar-logo"
         />
       </div>

@@ -2,16 +2,16 @@ import { GoogleMap, MarkerF } from "@react-google-maps/api";
 import { Divider, Typography, Button } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 
-import { RootState } from "../redux/reducers";
 import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../redux/reducers";
 import {
   deleteAll,
   deleteSearchList,
   fetchLocationRequest,
 } from "../redux/actions/search";
-import PlacesAutocomplete from "../components/placesAutocomplete";
+import PlacesAutocomplete from "../components/PlacesAutocomplete";
 
-const MapComponent = () => {
+const MapComponent: React.FC = () => {
   const dispatch = useDispatch();
 
   const { Title } = Typography;

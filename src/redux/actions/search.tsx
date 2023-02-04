@@ -1,3 +1,4 @@
+import { ISearchData } from "../../interface/search";
 import { Dispatch } from "redux";
 import { getGeocode, getLatLng } from "use-places-autocomplete";
 import {
@@ -18,7 +19,7 @@ export const fetchLocationRequest: any = (values: {
   };
 };
 
-export const fetchLocationSuccess = (values: {}) => {
+export const fetchLocationSuccess = (values: ISearchData) => {
   return {
     type: FETCH_LOCATION_SUCCESS,
     payload: values,
