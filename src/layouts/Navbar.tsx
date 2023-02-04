@@ -1,7 +1,7 @@
 import { Typography } from "antd";
-import "../assets/css/Navbar.css";
+import "../assets/css/components/Navbar.scss";
 
-const NavbarComponent: React.FC = () => {
+const Navbar: React.FC = () => {
   const { Title } = Typography;
 
   return (
@@ -20,4 +20,4 @@ const NavbarComponent: React.FC = () => {
   );
 };
 
-export default NavbarComponent;
+export default Navbar;

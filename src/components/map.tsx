@@ -37,7 +37,7 @@ const MapComponent: React.FC = () => {
     dispatch(fetchLocationRequest({ lat, lng }));
   };
 
-  const searchHistoryExist = searchList.length != 0;
+  const searchHistoryExist = searchList.length !== 0;
 
   return (
     <div className="container">
@@ -64,7 +64,7 @@ const MapComponent: React.FC = () => {
             )}
             {searchHistoryExist &&
               searchList.map((x: any, index: number) => (
-                <div className="history-section">
+                <div className="history-section" key={index}>
                   <div className="history-txt">
                     <Paragraph
                       className="history-address"

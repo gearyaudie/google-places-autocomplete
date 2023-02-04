@@ -2,7 +2,6 @@ import { useLoadScript } from "@react-google-maps/api";
 import { Spin } from "antd";
 
 import MapComponent from "../components/Map";
-import NavbarComponent from "../layouts/Navbar";
 import Layout from "../layouts/Layout";
 
 export default function HomeScreen() {
@@ -23,7 +22,6 @@ export default function HomeScreen() {
 
   return (
     <Layout>
-      <NavbarComponent />
       <MapComponent />
     </Layout>
   );

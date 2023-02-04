@@ -33,7 +33,7 @@ const searchReducer = (state = initialState, action: any) => {
     case DELETE_SEARCH_LIST:
       return {
         ...state,
-        search: state.search.filter((x: any) => x.address != action.payload),
+        search: state.search.filter((x: any) => x.address !== action.payload),
       };
     case DELETE_ALL:
       return {

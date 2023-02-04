@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import HomeScreen from "./screens/home";
+import HomeScreen from "./screens/Home";
 
 function App() {
   return (
